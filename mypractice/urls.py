@@ -22,7 +22,9 @@ admin.site.site_header = 'Storefront Admin'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('playground/', include('playground.urls')),
+    path('core/', include('core.urls')),
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.jwt')),
     path('store/', include('store.urls')),
     path('__debug__/', include(debug_toolbar.urls))
 ]
